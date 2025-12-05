@@ -1,6 +1,6 @@
 # CityGrid
 도시 건설 경영 시뮬레이션 게임
-![Image Alt Text](CityGrid_KeyImage.png)
+![Image Alt Text](기획서/CityGrid_KeyImage.png)
 
 # 🏙️ 도시 건설 경영 시뮬레이션
 
