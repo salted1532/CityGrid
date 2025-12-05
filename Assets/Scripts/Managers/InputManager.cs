@@ -1,4 +1,6 @@
+using System;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 
 // --------------------------------------------------
@@ -15,17 +17,18 @@ public class InputManager : MonoBehaviour
     [SerializeField]
     private LayerMask placementLayerMask;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public event Action OnClicked, OnExit;
+
+    private void Update()
     {
-        
+        if (Mouse.current.leftButton.wasPressedThisFrame)
+            OnClicked?.Invoke();
+        if (Keyboard.current.escapeKey.wasPressedThisFrame)
+            OnExit?.Invoke();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public bool IsPointerOverUI()
+        => EventSystem.current.IsPointerOverGameObject();
 
     public Vector3 GetSelectedMapPosition()
     {
