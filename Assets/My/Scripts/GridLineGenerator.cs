@@ -2,7 +2,7 @@ using UnityEngine;
 using System.Collections.Generic;
 
 [ExecuteAlways]
-public class GridData : MonoBehaviour
+public class GridLineGenerator : MonoBehaviour
 {
     [Header("Grid Settings")]
     public int width = 10;       // A
