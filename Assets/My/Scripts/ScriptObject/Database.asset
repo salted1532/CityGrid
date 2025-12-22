@@ -14,18 +14,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ObjectDatabaseSO
   objectData:
   - <Name>k__BackingField: 1x1 road
-    <ID>k__BackingField: 1
+    <ID>k__BackingField: 0
     <Size>k__BackingField: {x: 1, y: 1}
     <Prefab>k__BackingField: {fileID: 1618265226494174883, guid: 004ce8bc64c9f6349bfdc68d72be7bc9, type: 3}
   - <Name>k__BackingField: 1x1
-    <ID>k__BackingField: 2
+    <ID>k__BackingField: 1
     <Size>k__BackingField: {x: 1, y: 1}
     <Prefab>k__BackingField: {fileID: 8210164874066244200, guid: 903dd9faaf305ea49bcf0bc4380a90f5, type: 3}
   - <Name>k__BackingField: 2x2
-    <ID>k__BackingField: 3
+    <ID>k__BackingField: 2
     <Size>k__BackingField: {x: 2, y: 2}
     <Prefab>k__BackingField: {fileID: 861554598466000629, guid: 75c82586ac33ae44ebf9cc85443a3aad, type: 3}
   - <Name>k__BackingField: 2x1
-    <ID>k__BackingField: 4
+    <ID>k__BackingField: 3
     <Size>k__BackingField: {x: 2, y: 1}
     <Prefab>k__BackingField: {fileID: 5777110876250070514, guid: 1e357db0db081f349a783376cc3ae58b, type: 3}
