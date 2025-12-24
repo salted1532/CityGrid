@@ -67,9 +67,12 @@ public class PlacementSystem : MonoBehaviour
         Vector3 mousePosition = inputManager.GetSelectedMapPosition();
         Vector3Int gridPosition = grid.WorldToCell(mousePosition);
 
+        //건물 ID index 일시
         if (selectedObjectIndex > 0)
         {
+            //도로 반경내 확인
             bool RoadValidity = CanPlaceStructure(gridPosition, selectedObjectIndex);
+            //건물 겹침 확인
             bool placementValidity = CheckPlacementValidity(gridPosition, selectedObjectIndex);
             if (RoadValidity == false)
             {
@@ -80,8 +83,10 @@ public class PlacementSystem : MonoBehaviour
                 return;
             }
         }
+        //도로 ID index 일시
         else if (selectedObjectIndex == 0)
         {
+            //도로 겹침 확인
             bool placementValidity = CheckPlacementValidity(gridPosition, selectedObjectIndex);
             if (placementValidity == false)
             {
@@ -161,12 +166,12 @@ public class PlacementSystem : MonoBehaviour
     private bool CanPlaceStructure(Vector3Int gridPosition, int selectedObjectIndex)
     {
         // 건물이면 1) 충돌 검사 2) 도로 반경 검사 둘 다 필요
-        bool noCollision = roadData.CanPlaceObejctAt(
-            gridPosition,
-            database.objectData[selectedObjectIndex].Size);
+        bool noCollision = roadData.CanPlaceObejctAt(gridPosition, database.objectData[selectedObjectIndex].Size);
 
         if (!noCollision)
+        {
             return false;
+        }
 
         // 도로 반경 4칸 내에 도로가 있는지 검사
         bool nearRoad = roadData.HasRoadNearby(gridPosition, 4, database.objectData[selectedObjectIndex].Size);
