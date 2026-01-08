@@ -30,6 +30,19 @@ public class ResourceManager : MonoBehaviour
     {
         
     }
+    //자원량 출력
+    public int GetElectricity()
+    {
+        return Electricity;
+    }
+    public int GetWater()
+    {
+        return Water;
+    }
+    public int GetMoney()
+    {
+        return Money;
+    }
 
 
     //자원량 조정
